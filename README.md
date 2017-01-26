@@ -6,7 +6,7 @@ android app that already setup to play with elementary parsing JSON without any 
 ```
 git clone https://github.com/locovna/i-just-wanna-try-to-parse-f-JSON-in-android.git
 ```
-1. import project via Android Studio
+1. import project (`abitofjson` folder) via Android Studio
 2. change `REQUEST_URL`
 3. implement parsing in `extractSomethingFromJson`
 
@@ -14,7 +14,7 @@ git clone https://github.com/locovna/i-just-wanna-try-to-parse-f-JSON-in-android
 
 ### where is it
 ```java
-//in MainActivity change request url (json query)
+//in MainActivity change request url
   private static final String REQUEST_URL = "";
 ```
 
@@ -28,8 +28,7 @@ private Something extractSomethingFromJson(String somethingJSON) {
 
     //replace code here
 
-  } catch{}
-  return null;
+  } catch{...}
 }
 ```
 
