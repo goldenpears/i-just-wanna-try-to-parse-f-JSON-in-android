@@ -1,0 +1,136 @@
+$primary-bg-color: #d1e3de
+$primary-text-color: #333
+$secondary-text-color: #b7d1d4
+$color-accent: #9f76fc
+
+$font-stack: Helvetica, sans-serif
+$font-weight: 200
+$font-size: .8em
+
+$margin-top: 10px
+$text-padding: 25px
+
+body
+  margin-top: $margin-top * 5
+  font: 100% $font-stack
+  font-size: $font-size
+  color: $primary-text-color
+  background-color: $primary-bg-color
+
+a, a:visited
+  color: $secondary-text-color
+  text-decoration: none
+
+a:hover 
+  color: $color-accent
+  cursor: pointer
+
+.container
+  width: 60vw
+  margin: auto
+
+section
+  margin: 0 auto
+  display: flex
+  justify-content: space-between
+
+.title
+  font-size: $font-size * 3
+  font-weight: bold
+  margin-bottom: 30px
+
+.title_json_heart_android
+  a
+    color: $primary-text-color
+  p
+    display: inline-block
+  .fa-heart:hover
+    color: $color-accent
+    -webkit-animation: pulse 1s
+    animation: pulse 1s
+  .fa-heart
+    color: $secondary-text-color
+    font-size: 20px
+    text-align: center
+  span
+    font-family: monospace
+    font-weight: 100
+    color: $secondary-text-color
+    font-size: 25px
+
+.menu
+  padding: 0 120px
+
+.content
+  flex-direction: column
+  background-color: #eee
+  margin-top: $margin-top
+  padding: 30px
+
+  p 
+    color: #979797
+    padding-left: $text-padding * 2
+    padding-right: $text-padding * 4
+    font-weight: $font-weight
+    margin: .3em
+    font-size: $font-size
+
+  .content_title
+    color: black
+    font-weight: bold
+    padding-left: $text-padding
+    font-size: $font-size * 2
+  span
+    color: #ff3c3c
+    font-weight: bold
+
+.code
+  @extend p
+  font-family: monospace
+  
+
+.box
+  background-color: #ede5e5
+  border-radius: 3px
+  padding: 20px
+  margin-top: 50px
+
+@media screen and (min-width: 2000px)
+  .container
+    width: 40vw
+
+@media screen and (min-width: 1440px) and  (max-width: 2000px)
+  .container
+    width: 50vw
+
+@media screen and (max-width: 700px)
+.menu
+  padding: 0 60px
+  .container
+    width: 85vw
+  section
+    justify-content: space-between
+  .content
+    padding: 10px
+    p 
+      padding-left: $text-padding
+      padding-right: $text-padding
+
+@media screen and (max-width: 580px) and (min-width: 240px)
+  .container
+    width: 95vw
+  section
+    flex-direction: column
+    text-align: center
+  .menu
+    padding: 0
+    a
+      margin: 0 50px 10px 50px
+      padding: 5px
+      border: 1px solid #ccc
+      border-radius: 4px
+  .content
+    padding: 0px
+    p 
+      padding-left: 10px
+      padding-right: 10px

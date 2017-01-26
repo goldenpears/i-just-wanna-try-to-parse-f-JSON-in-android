@@ -22,7 +22,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.TextView;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -48,16 +47,16 @@ public class MainActivity extends AppCompatActivity {
   /**
    * URL to query for Some information
    */
-  private static final String REQUEST_URL = "";
+  private static final String REQUEST_URL = "https://api.github.com/repos/locovna/i-just-wanna-try-to-parse-f-JSON-in-android";
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    // Kick off an {@link AsyncTask} to perform the network request
-//    UserAsyncTask task = new UserAsyncTask();
-//    task.execute();
+    //Perform the network request
+    UserAsyncTask task = new UserAsyncTask();
+    task.execute();
   }
 
   /**
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
   /**
    * {@link AsyncTask} to perform the network request on a background thread, and then
-   * update the UI with the first earthquake in the response.
+   * update the UI with Something in the response.
    */
   private class UserAsyncTask extends AsyncTask<URL, Void, Something> {
 
@@ -94,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
       }
 
       // Extract relevant fields from the JSON response and create an {@link Something} object
-      Something something = extractFeatureFromJson(jsonResponse);
+      Something something = extractSomethingFromJson(jsonResponse);
 
       // Return the {@link Something} object as the result fo the {@link SomethingAsyncTask}
       return something;
@@ -187,21 +186,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Return an {@link Something} object by parsing out information
      */
-    private Something extractFeatureFromJson(String somethingJSON) {
+    private Something extractSomethingFromJson(String somethingJSON) {
       //if the JSON string empty or null return early
       if (TextUtils.isEmpty(somethingJSON)) {
         return null;
       }
 
       try {
-        JSONArray somethingArray = new JSONArray(somethingJSON);
-        // If there are results in the features array
-        if (somethingArray.length() > 0) {
-          JSONObject firstUser = somethingArray.getJSONObject(0);
-          String name = firstUser.getString("something");
-          // Create a new {@link Something} object
-          return new Something(name);
-        }
+        JSONObject obj = new JSONObject(somethingJSON);
+        String pageName = obj.getString("full_name");
+        pageName = "full name of current repo is: \n" + pageName;
+
+        return new Something(pageName);
       } catch (JSONException e) {
         Log.e(LOG_TAG, "Problem parsing the something JSON results", e);
       }

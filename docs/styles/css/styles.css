@@ -1,0 +1,121 @@
+body {
+  margin-top: 50px;
+  font: 100% Helvetica, sans-serif;
+  font-size: 0.8em;
+  color: #333;
+  background-color: #d1e3de; }
+
+a, a:visited {
+  color: #b7d1d4;
+  text-decoration: none; }
+
+a:hover {
+  color: #9f76fc;
+  cursor: pointer; }
+
+.container {
+  width: 60vw;
+  margin: auto; }
+
+section {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+
+.title {
+  font-size: 2.4em;
+  font-weight: bold;
+  margin-bottom: 30px; }
+
+.title_json_heart_android a {
+  color: #333; }
+.title_json_heart_android p, .title_json_heart_android .code {
+  display: inline-block; }
+.title_json_heart_android .fa-heart:hover {
+  color: #9f76fc;
+  -webkit-animation: pulse 1s;
+  animation: pulse 1s; }
+.title_json_heart_android .fa-heart {
+  color: #b7d1d4;
+  font-size: 20px;
+  text-align: center; }
+.title_json_heart_android span {
+  font-family: monospace;
+  font-weight: 100;
+  color: #b7d1d4;
+  font-size: 25px; }
+
+.menu {
+  padding: 0 120px; }
+
+.content {
+  flex-direction: column;
+  background-color: #eee;
+  margin-top: 10px;
+  padding: 30px; }
+  .content p, .content .code {
+    color: #979797;
+    padding-left: 50px;
+    padding-right: 100px;
+    font-weight: 200;
+    margin: 0.3em;
+    font-size: 0.8em; }
+  .content .content_title {
+    color: black;
+    font-weight: bold;
+    padding-left: 25px;
+    font-size: 1.6em; }
+  .content span {
+    color: #ff3c3c;
+    font-weight: bold; }
+
+.code {
+  font-family: monospace; }
+
+.box {
+  background-color: #ede5e5;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 50px; }
+
+@media screen and (min-width: 2000px) {
+  .container {
+    width: 40vw; } }
+@media screen and (min-width: 1440px) and (max-width: 2000px) {
+  .container {
+    width: 50vw; } }
+.menu {
+  padding: 0 60px; }
+  .menu .container {
+    width: 85vw; }
+  .menu section {
+    justify-content: space-between; }
+  .menu .content {
+    padding: 10px; }
+    .menu .content p, .menu .content .code {
+      padding-left: 25px;
+      padding-right: 25px; }
+
+@media screen and (max-width: 580px) and (min-width: 240px) {
+  .container {
+    width: 95vw; }
+
+  section {
+    flex-direction: column;
+    text-align: center; }
+
+  .menu {
+    padding: 0; }
+    .menu a {
+      margin: 0 50px 10px 50px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px; }
+
+  .content {
+    padding: 0px; }
+    .content p, .content .code {
+      padding-left: 10px;
+      padding-right: 10px; } }
+
+/*# sourceMappingURL=styles.css.map */
