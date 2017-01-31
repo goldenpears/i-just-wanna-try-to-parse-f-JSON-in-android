@@ -5,7 +5,7 @@ $color-accent: #9f76fc
 
 $font-stack: Helvetica, sans-serif
 $font-weight: 200
-$font-size: .8em
+$font-size: 1em
 
 $margin-top: 10px
 $text-padding: 25px
@@ -25,6 +25,18 @@ a:hover
   color: $color-accent
   cursor: pointer
 
+summary 
+  outline: none
+
+DETAILS[open] SUMMARY ~ * 
+  animation: sweep .5s cubic-bezier(0, 0, 0.23, 1.07)
+
+@keyframes sweep 
+  0%
+    margin-top: -15px
+  100%
+    margin-top: 0px
+
 .container
   width: 60vw
   margin: auto
@@ -37,6 +49,9 @@ section
 .title
   font-size: $font-size * 3
   font-weight: bold
+  margin: 30px
+
+h3
   margin-bottom: 30px
 
 .title_json_heart_android
@@ -63,9 +78,10 @@ section
 
 .content
   flex-direction: column
-  background-color: #eee
+  background-color: #fff
   margin-top: $margin-top
   padding: 30px
+
 
   p 
     color: #979797
@@ -82,7 +98,6 @@ section
     font-size: $font-size * 2
   span
     color: #ff3c3c
-    font-weight: bold
 
 .code
   @extend p
@@ -94,6 +109,17 @@ section
   border-radius: 3px
   padding: 20px
   margin-top: 50px
+
+.gist 
+  .gist-file 
+    border: none !important
+  .gist-meta
+    background-color: transparent !important
+    color: #dedede !important
+    a
+      color: #9b9b9b !important
+  .highlight
+    background-color: #f3f3f3 !important
 
 @media screen and (min-width: 2000px)
   .container
