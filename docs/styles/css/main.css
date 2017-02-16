@@ -13,17 +13,6 @@ a:hover {
   color: #9f76fc;
   cursor: pointer; }
 
-summary {
-  outline: none; }
-
-DETAILS[open] SUMMARY ~ * {
-  animation: sweep 0.5s cubic-bezier(0, 0, 0.23, 1.07); }
-
-@keyframes sweep {
-  0% {
-    margin-top: -15px; }
-  100% {
-    margin-top: 0px; } }
 .container {
   width: 60vw;
   margin: auto; }
@@ -38,12 +27,9 @@ section {
   font-weight: bold;
   margin: 30px; }
 
-h3 {
-  margin-bottom: 30px; }
-
 .title_json_heart_android a {
   color: #333; }
-.title_json_heart_android p, .title_json_heart_android .code {
+.title_json_heart_android p {
   display: inline-block; }
 .title_json_heart_android .fa-heart:hover {
   color: #9f76fc;
@@ -59,15 +45,34 @@ h3 {
   color: #b7d1d4;
   font-size: 25px; }
 
-.menu {
-  padding: 0 120px; }
+.gist {
+  padding: 30px; }
+  .gist .gist-meta {
+    background-color: transparent !important;
+    color: whitesmoke !important; }
+    .gist .gist-meta a {
+      color: #dbdbdb !important; }
+  .gist .highlight {
+    background-color: white !important; }
+  .gist .pl-k {
+    color: #ffafaf !important; }
+  .gist .pl-smi {
+    color: #b7d1d4 !important; }
+  .gist .pl-s {
+    color: #9f76fc !important; }
+  .gist .blob-code-inner {
+    color: #ffafaf !important; }
+
+h3 {
+  margin-top: 80px;
+  padding-left: 25px; }
 
 .content {
   flex-direction: column;
   background-color: #fff;
   margin-top: 10px;
-  padding: 30px; }
-  .content p, .content .code {
+  padding: 40px; }
+  .content p {
     color: #979797;
     padding-left: 50px;
     padding-right: 100px;
@@ -79,27 +84,11 @@ h3 {
     font-weight: bold;
     padding-left: 25px;
     font-size: 2em; }
-  .content span {
-    color: #ff3c3c; }
-
-.code {
-  font-family: monospace; }
-
-.box {
-  background-color: #ede5e5;
-  border-radius: 3px;
-  padding: 20px;
-  margin-top: 50px; }
-
-.gist .gist-file {
-  border: none !important; }
-.gist .gist-meta {
-  background-color: transparent !important;
-  color: #dedede !important; }
-  .gist .gist-meta a {
-    color: #9b9b9b !important; }
-.gist .highlight {
-  background-color: #f3f3f3 !important; }
+  .content pre {
+    white-space: pre-wrap; }
+    .content pre span {
+      color: #ffafaf;
+      font-weight: bold; }
 
 @media screen and (min-width: 2000px) {
   .container {
@@ -107,18 +96,21 @@ h3 {
 @media screen and (min-width: 1440px) and (max-width: 2000px) {
   .container {
     width: 50vw; } }
-.menu {
-  padding: 0 60px; }
-  .menu .container {
-    width: 85vw; }
-  .menu section {
-    justify-content: space-between; }
-  .menu .content {
-    padding: 10px; }
-    .menu .content p, .menu .content .code {
-      padding-left: 25px;
-      padding-right: 25px; }
+@media screen and (max-width: 800px) {
+  .menu {
+    padding: 0 60px; }
 
+  .container {
+    width: 85vw; }
+
+  section {
+    justify-content: space-between; }
+
+  .content {
+    padding: 10px; }
+    .content p {
+      padding-left: 25px;
+      padding-right: 25px; } }
 @media screen and (max-width: 580px) and (min-width: 240px) {
   .container {
     width: 95vw; }
@@ -137,7 +129,7 @@ h3 {
 
   .content {
     padding: 0px; }
-    .content p, .content .code {
+    .content p {
       padding-left: 10px;
       padding-right: 10px; } }
 

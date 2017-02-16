@@ -1,0 +1,41 @@
+@import variables
+
+@media screen and (min-width: 2000px)
+  .container
+    width: 40vw
+
+@media screen and (min-width: 1440px) and  (max-width: 2000px)
+  .container
+    width: 50vw
+
+@media screen and (max-width: 800px)
+  .menu
+    padding: 0 60px
+  .container
+    width: 85vw
+  section
+    justify-content: space-between
+  .content
+    padding: 10px
+    p 
+      padding-left: $text-padding
+      padding-right: $text-padding
+
+@media screen and (max-width: 580px) and (min-width: 240px)
+  .container
+    width: 95vw
+  section
+    flex-direction: column
+    text-align: center
+  .menu
+    padding: 0
+    a
+      margin: 0 50px 10px 50px
+      padding: 5px
+      border: 1px solid #ccc
+      border-radius: 4px
+  .content
+    padding: 0px
+    p 
+      padding-left: 10px
+      padding-right: 10px

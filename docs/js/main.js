@@ -1,5 +1,3 @@
-console.log('suppose to work');
-
 function loadStart() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
