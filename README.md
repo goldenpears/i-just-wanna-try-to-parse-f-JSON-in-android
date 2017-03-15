@@ -1,5 +1,5 @@
-##try JSON in android
-android app that already setup to play with elementary parsing JSON without any additional libraries
+<h1 align="center">try parse JSON in android</h1>
+<p align="center">android app that already setup to play with elementary parsing JSON without any additional libraries</p>
 
 ### getting started
 
@@ -34,6 +34,6 @@ private Something extractSomethingFromJson(String somethingJSON) {
 
 ### additional info
 
-[here you can find full guide](http://locovna.com/i-just-wanna-try-to-parse-f-JSON-in-android/), *but it's still in progress*
+[here you can find full guide](http://locovna.com/i-just-wanna-try-to-parse-f-JSON-in-android/)
 
->highly inspired by [udacity course](https://www.udacity.com/course/android-basics-networking--ud843)
+highly inspired by [udacity course](https://www.udacity.com/course/android-basics-networking--ud843)
