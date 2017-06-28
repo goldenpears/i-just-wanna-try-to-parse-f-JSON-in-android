@@ -34,6 +34,6 @@ private Something extractSomethingFromJson(String somethingJSON) {
 
 ### additional info
 
-[here you can find full guide](http://locovna.com/i-just-wanna-try-to-parse-f-JSON-in-android/)
+[here you can find full guide](http://goldenpears.github.io/i-just-wanna-try-to-parse-f-JSON-in-android/)
 
 highly inspired by [udacity course](https://www.udacity.com/course/android-basics-networking--ud843)
